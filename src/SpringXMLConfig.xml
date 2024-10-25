@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+          http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+              http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+">
+
+ <!--  
+<bean name="Harshdeep" class="spr.dto.Vehicle">
+<property name="vNo" value="MP09QC9342"/>    
+<property name="state" value="MP"/>    
+<property name="ownerName" value="Raj"/>    
+<property name="fuelCategory" value="diesel"/>   
+<property name="govt" ref="technosoft"/>    
+    </bean>
+    
+<bean name="technosoft" class="spr.dto.Govt">
+<property name="country" value="germany"/>    
+ <property name="rules" value="abc"/>  
+</bean>
+-->
+        
+<!-- 
+<bean name="Harshdeep" class="spr.dto.Vehicle" autowire="byType">
+<property name="vNo" value="MP09QC9342"/>    
+ <property name="state" value="MP"/>    
+<property name="ownerName" value="Raunak"/>    
+<property name="fuelCategory" value="petrol"/>   
+<property name="govt" ref="technosoft"/>    
+</bean>
+    
+<bean name="technosoft" class="spr.dto.Govt">
+<property name="country" value="UK"/>    
+ <property name="rules" value="ksds"/>  
+</bean> 
+-->
+        
+<bean name="Harshdeep" class="spr.dto.Vehicle" autowire="byName">
+<property name="vNo" value="MP09QC9342"/>    
+<property name="state" value="MP"/>    
+<property name="ownerName" value="Raj"/>    
+<property name="fuelCategory" value="diesel"/>   
+ </bean>
+    
+<bean name="govt" class="spr.dto.Govt">
+<property name="country" value="germany"/>    
+<property name="rules" value="abc"/>  
+</bean>
+   
+<!--
+<bean name="Harshdeep" class="spr.dto.Vehicle">
+<constructor-arg name="vNo" value="MPO9QC5565"/>
+<constructor-arg name="state" value="UP"/>
+<constructor-arg name="ownerName" value="Hritik"/>
+<constructor-arg name="fuelCategory" value="petrol"/>
+-->
+
+<!--
+<bean name="Harshdeep" class="spr.dto.Vehicle" 
+    p:vNo="MP09GF6743" p:state="CG" p:ownerName="tilak" p:fuelCategory="CNG" />
+-->
+</beans>
+
